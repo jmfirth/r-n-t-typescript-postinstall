@@ -9,7 +9,7 @@ pkg.scripts['check'] = 'tsc --noEmit'
 pkg.scripts['lint'] = 'tslint -c ./tslint.json --project ./tsconfig.json -e "src/**/*.d.ts"';
 pkg.scripts['test'] = 'jest';
 pkg.scripts['validate'] = 'npm run lint && npm run check && npm run jest';
-pkg.scripts['postinstall'] = 'npm install';
+pkg.scripts['postmerge'] = 'npm install';
 pkg.scripts['precommit'] = 'npm run validate';
 
 pkg.jest = {
