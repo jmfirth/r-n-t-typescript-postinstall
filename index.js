@@ -1,7 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const fileName = path.join(__dirname, '..', '..', 'package.json');
+const workingDirPath = path.join(__dirname, '..', '..');
+const fileName = path.join(workingDirPath, 'package.json');
+const simpleGit = require('simple-git')(workingDirPath);
 const pkg = require(fileName);
+
+simpleGit.init();
 
 // add scripts
 pkg.scripts = pkg.scripts || {}
