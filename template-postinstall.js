@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const workingDirPath = path.join(__dirname);
+const workingDirPath = path.join(__dirname, '..', '..');
 const fileName = path.join(workingDirPath, 'package.json');
 const pkg = require(fileName);
 

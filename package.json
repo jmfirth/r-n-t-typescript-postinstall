@@ -1,6 +1,6 @@
 {
   "name": "r-n-t-typescript-postinstall",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Postinstall script for react-native-template-typescript",
   "main": "template-postinstall.js",
   "repository": {
