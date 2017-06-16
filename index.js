@@ -33,6 +33,6 @@ pkg.jest = {
 
 fs.writeFileSync(fileName, JSON.stringify(pkg, undefined, 2));
 
-rimraf(path.join(workingDir, '__tests__', 'index.*.js'));
+rimraf(path.join(workingDirPath, '__tests__', 'index.*.js'));
 
 console.log('🎉 Template postinstall script complete.')
