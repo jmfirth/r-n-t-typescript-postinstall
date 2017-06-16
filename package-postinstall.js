@@ -15,7 +15,7 @@ pkg.scripts['test'] = 'jest';
 pkg.scripts['validate'] = 'npm run lint && npm run check && npm run jest';
 pkg.scripts['postmerge'] = 'npm install';
 pkg.scripts['precommit'] = 'npm run validate';
-pkg.scripts['postinstall'] = 'node node_modules/r-n-t-typescript-postinstal/template-postinstall.js';
+pkg.scripts['postinstall'] = 'node node_modules/r-n-t-typescript-postinstall/template-postinstall.js';
 
 fs.writeFileSync(fileName, JSON.stringify(pkg, undefined, 2));
 
