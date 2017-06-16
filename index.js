@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const rimraf = require('rimraf');
 const workingDirPath = path.join(__dirname, '..', '..');
 const fileName = path.join(workingDirPath, 'package.json');
 const simpleGit = require('simple-git')(workingDirPath);
@@ -31,5 +32,7 @@ pkg.jest = {
 };
 
 fs.writeFileSync(fileName, JSON.stringify(pkg, undefined, 2));
+
+rimraf(path.join(workingDir, '__tests__', 'index.*.js'));
 
 console.log('🎉 Template postinstall script complete.')

@@ -1,6 +1,6 @@
 {
   "name": "r-n-t-typescript-postinstall",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Postinstall script for react-native-template-typescript",
   "main": "index.js",
   "repository": {
@@ -13,6 +13,7 @@
     "postinstall": "node ./index.js"
   },
   "dependencies": {
+    "rimraf": "^2.6.1",
     "simple-git": "^1.73.0"
   }
 }
