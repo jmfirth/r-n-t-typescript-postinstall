@@ -12,9 +12,9 @@ simpleGit.init();
 pkg.scripts = pkg.scripts || {}
 pkg.scripts['check'] = 'tsc --noEmit'
 pkg.scripts['lint'] = 'tslint -c ./tslint.json --project ./tsconfig.json -e "src/**/*.d.ts"';
-pkg.scripts['test'] = 'jest';
-pkg.scripts['validate'] = 'npm run lint && npm run check && npm run jest';
-pkg.scripts['postmerge'] = 'npm install';
+pkg.scripts['test'] = 'jest --silent';
+pkg.scripts['validate'] = 'npm run lint && npm run check && npm run test';
+pkg.scripts['postmerge'] = 'yarn install';
 pkg.scripts['precommit'] = 'npm run validate';
 
 pkg.jest = {
