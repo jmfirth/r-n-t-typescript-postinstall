@@ -15,7 +15,20 @@ pkg.scripts['test'] = 'jest';
 pkg.scripts['validate'] = 'npm run lint && npm run check && npm run jest';
 pkg.scripts['postmerge'] = 'npm install';
 pkg.scripts['precommit'] = 'npm run validate';
-pkg.scripts['postinstall'] = 'node node_modules/r-n-t-typescript-postinstall/template-postinstall.js';
+
+pkg.jest = {
+  "preset": "react-native",
+  "transform": {
+    "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+    ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+  },
+  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js"
+  ]
+};
 
 fs.writeFileSync(fileName, JSON.stringify(pkg, undefined, 2));
 
