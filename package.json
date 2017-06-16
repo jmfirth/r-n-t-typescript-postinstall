@@ -2,7 +2,7 @@
   "name": "r-n-t-typescript-postinstall",
   "version": "1.0.1",
   "description": "Postinstall script for react-native-template-typescript",
-  "main": "index.js",
+  "main": "template-postinstall.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jmfirth/r-n-t-typescript-postinstall.git"
@@ -10,7 +10,7 @@
   "author": "Justin Firth",
   "license": "MIT",
   "scripts": {
-    "postinstall": "node ./index.js"
+    "postinstall": "node ./package-postinstall.js"
   },
   "dependencies": {
     "simple-git": "^1.73.0"
